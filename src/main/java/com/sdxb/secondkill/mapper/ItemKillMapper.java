@@ -44,8 +44,8 @@ public interface ItemKillMapper {
             "where a.is_active=1 and a.id=#{id};")
     ItemKill selectByid(Integer id);
 
-//    @Update("update item_kill set total=total-1 where id=#{killId}")
-//    int updateKillItem(Integer killId);
+    @Update("update item_kill set total=total-1 where id=#{killId}")
+    int updateKillItem(Integer killId);
 
 //    @Select("select \n" +
 //            "a.*,\n" +

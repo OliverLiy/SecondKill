@@ -3,9 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e42e38b1-d1b9-461a-bd00-452e66e277f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sdxb/secondkill/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sdxb/secondkill/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sdxb/secondkill/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sdxb/secondkill/MainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sdxb/secondkill/mapper/ItemKillMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sdxb/secondkill/mapper/ItemKillMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sdxb/secondkill/mapper/ItemKillMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sdxb/secondkill/mapper/ItemKillMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -56,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -85,6 +97,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SnowFlake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sdxb.secondkill.utils.SnowFlake" />
+      <module name="SecondKill" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sdxb.secondkill.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="SecondKill" />
       <extension name="coverage">
@@ -100,11 +125,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApplication" />
+      <item itemvalue="Application.SnowFlake" />
       <item itemvalue="Spring Boot.MainApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MainApplication" />
+        <item itemvalue="Application.SnowFlake" />
         <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
@@ -140,7 +167,11 @@
       <workItem from="1595507651596" duration="686000" />
       <workItem from="1595508527979" duration="4268000" />
       <workItem from="1595594391492" duration="1992000" />
-      <workItem from="1595644519073" duration="2370000" />
+      <workItem from="1595644519073" duration="10654000" />
+      <workItem from="1595725257886" duration="7819000" />
+      <workItem from="1595919082253" duration="7791000" />
+      <workItem from="1596025926456" duration="604000" />
+      <workItem from="1596079031364" duration="978000" />
     </task>
     <servers />
   </component>
@@ -164,54 +195,54 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="555" y="171" key="FileChooserDialogImpl/0.0.1549.831@0.0.1549.831" timestamp="1595401743341" />
-    <state width="1506" height="281" key="GridCell.Tab.0.bottom" timestamp="1595646228472">
+    <state width="1506" height="186" key="GridCell.Tab.0.bottom" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595646228472" />
-    <state width="1506" height="281" key="GridCell.Tab.0.center" timestamp="1595646228471">
+    <state width="1506" height="186" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.0.center" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1595646228471" />
-    <state width="1506" height="281" key="GridCell.Tab.0.left" timestamp="1595646228471">
+    <state width="1506" height="186" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.0.left" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1595646228471" />
-    <state width="1506" height="281" key="GridCell.Tab.0.right" timestamp="1595646228471">
+    <state width="1506" height="186" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.0.right" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1595646228471" />
-    <state width="1506" height="281" key="GridCell.Tab.1.bottom" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.1.bottom" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.1.center" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.1.center" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.1.left" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.1.left" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.1.right" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.1.right" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.2.bottom" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.2.bottom" timestamp="1595932971876">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.2.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.2.center" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.2.bottom/0.0.1549.831@0.0.1549.831" timestamp="1595932971876" />
+    <state width="1506" height="186" key="GridCell.Tab.2.center" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.2.center/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.2.left" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.2.center/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.2.left" timestamp="1595932971875">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.2.left/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
-    <state width="1506" height="281" key="GridCell.Tab.2.right" timestamp="1595646228380">
+    <state width="1506" height="186" key="GridCell.Tab.2.left/0.0.1549.831@0.0.1549.831" timestamp="1595932971875" />
+    <state width="1506" height="186" key="GridCell.Tab.2.right" timestamp="1595932971876">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1506" height="281" key="GridCell.Tab.2.right/0.0.1549.831@0.0.1549.831" timestamp="1595646228380" />
+    <state width="1506" height="186" key="GridCell.Tab.2.right/0.0.1549.831@0.0.1549.831" timestamp="1595932971876" />
     <state x="284" y="0" key="SettingsEditor" timestamp="1595296277242">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
