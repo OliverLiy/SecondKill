@@ -34,13 +34,15 @@ public class KillController {
         if (result.hasErrors()||killDto.getKillid()<0){
             return new BaseResponse(StatusCode.InvalidParam);
         }
+        //修改前
+        //Integer userid=10;
         //添加登陆功能后使用这段代码
-//        Object uid=httpSession.getAttribute("uid");
-//        if (uid==null){
-//            return new BaseResponse(StatusCode.UserNotLog);
-//        }
-//        Integer userid= (Integer) uid;
-        Integer userid=10;
+        Object uid=httpSession.getAttribute("uid");
+        if (uid==null){
+            return new BaseResponse(StatusCode.UserNotLog);
+        }
+        Integer userid= (Integer) uid;
+
         try {
             Boolean res=killService.KillItem(killDto.getKillid(),userid);
             if (!res){
