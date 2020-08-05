@@ -1,5 +1,6 @@
 package com.sdxb.secondkill.mapper;
 
+import com.sdxb.secondkill.dto.KillSuccessUserDto;
 import com.sdxb.secondkill.entity.ItemKillSuccess;
 import org.apache.ibatis.annotations.*;
 
@@ -20,12 +21,12 @@ public interface ItemKillSuccessMapper {
     @Insert("insert into item_kill_success(code,item_id,kill_id,user_id,status,create_time) values(#{code},#{itemId},#{killId},#{userId},#{status},#{createTime})")
     int insertSelective(ItemKillSuccess entity);
 
-//    @Select("select a.*,b.user_name,b.phone,b.email,c.name as itemName\n" +
-//            "from item_kill_success as a\n" +
-//            "left join user b on b.id=a.user_id\n" +
-//            "left join item c on c.id=a.item_id\n" +
-//            "where a.code=#{orderNo} and b.is_active=1")
-//    KillSuccessUserDto selectByCode(String orderNo);
+    @Select("select a.*,b.user_name,b.phone,b.email,c.name as itemName\n" +
+            "from item_kill_success as a\n" +
+            "left join user b on b.id=a.user_id\n" +
+            "left join item c on c.id=a.item_id\n" +
+            "where a.code=#{orderNo} and b.is_active=1")
+    KillSuccessUserDto selectByCode(String orderNo);
 
 
     @Select("select * from item_kill_success where code=#{code}")

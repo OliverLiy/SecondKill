@@ -6,6 +6,7 @@ import com.sdxb.secondkill.enums.SysConstant;
 import com.sdxb.secondkill.mapper.ItemKillMapper;
 import com.sdxb.secondkill.mapper.ItemKillSuccessMapper;
 import com.sdxb.secondkill.service.KillService;
+import com.sdxb.secondkill.service.RabbitSenderService;
 import com.sdxb.secondkill.utils.SnowFlake;
 import org.joda.time.DateTime;
 import org.redisson.api.RLock;
@@ -32,6 +33,9 @@ public class KillServiceImpl implements KillService {
 
     @Autowired
     private ItemKillSuccessMapper itemKillSuccessMapper;
+
+    @Autowired
+    private RabbitSenderService rabbitSenderService;
 
     @Override
     public Boolean KillItem(Integer killId, Integer userId) throws Exception {
@@ -68,7 +72,7 @@ public class KillServiceImpl implements KillService {
                 //处理抢购成功后的流程
                 //这里的业务可以自己加
                 //将订单送入死信队列
-                //rabbitSenderService.sendKillSuccessOrderExpireMsg(orderNo);
+                rabbitSenderService.sendKillSuccessOrderExpireMsg(orderNo);
             }
         }
     }
