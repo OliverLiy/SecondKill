@@ -62,4 +62,45 @@ public class KillController {
     public String killfail(){
         return "killfail";
     }
+
+    @RequestMapping(value = prefix+"/test/execute",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse testexecute(@RequestBody @Validated KillDto killDto, BindingResult result, HttpSession httpSession){
+        if (result.hasErrors()||killDto.getKillid()<0){
+            return new BaseResponse(StatusCode.InvalidParam);
+        }
+        try {
+            Boolean res=killService.KillItem(killDto.getKillid(),killDto.getUserid());
+            if (!res){
+                return new BaseResponse(StatusCode.Fail.getCode(),"商品已经抢购完或您已抢购过该商品");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
+        baseResponse.setData("抢购成功");
+        return baseResponse;
+    }
+
+    //测试mysql优化的版本
+    @RequestMapping(value = prefix+"/test/execute2",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse testexecute2(@RequestBody @Validated KillDto killDto, BindingResult result, HttpSession httpSession){
+        if (result.hasErrors()||killDto.getKillid()<0){
+            return new BaseResponse(StatusCode.InvalidParam);
+        }
+        try {
+            Boolean res=killService.KillItemV2(killDto.getKillid(),killDto.getUserid());
+            if (!res){
+                return new BaseResponse(StatusCode.Fail.getCode(),"商品已经抢购完或您已抢购过该商品");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
+        baseResponse.setData("抢购成功");
+        return baseResponse;
+    }
+
+
 }

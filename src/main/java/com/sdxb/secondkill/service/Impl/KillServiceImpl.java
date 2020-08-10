@@ -77,25 +77,26 @@ public class KillServiceImpl implements KillService {
         }
     }
 
-//    //mysql优化
-//    public Boolean KillItemV2(Integer killId, Integer userId) throws Exception {
-//        Boolean result=false;
-//        //判断当前用户是否抢购过该商品
-//        if (itemKillSuccessMapper.countByKillUserId(killId,userId)<=0){
-//            //获取商品详情
-//            ItemKill itemKill=itemKillMapper.selectByidV2(killId);
-//            if (itemKill!=null&&itemKill.getCanKill()==1 && itemKill.getTotal()>0){
-//                int res=itemKillMapper.updateKillItemV2(killId);
-//                if (res>0){
-//                    commonRecordKillSuccessInfo(itemKill,userId);
-//                    result=true;
-//                }
-//            }
-//        }else {
-//            System.out.println("您已经抢购过该商品");
-//        }
-//        return result;
-//    }
+    //mysql优化
+    @Override
+    public Boolean KillItemV2(Integer killId, Integer userId) throws Exception {
+        Boolean result=false;
+        //判断当前用户是否抢购过该商品
+        if (itemKillSuccessMapper.countByKillUserId(killId,userId)<=0){
+            //获取商品详情
+            ItemKill itemKill=itemKillMapper.selectByidV2(killId);
+            if (itemKill!=null&&itemKill.getCanKill()==1 && itemKill.getTotal()>0){
+                int res=itemKillMapper.updateKillItemV2(killId);
+                if (res>0){
+                    commonRecordKillSuccessInfo(itemKill,userId);
+                    result=true;
+                }
+            }
+        }else {
+            System.out.println("您已经抢购过该商品");
+        }
+        return result;
+    }
 //
 //    @Autowired
 //    private StringRedisTemplate stringRedisTemplate;
