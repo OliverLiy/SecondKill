@@ -102,5 +102,64 @@ public class KillController {
         return baseResponse;
     }
 
+    //redis分布式锁的版本
+    @RequestMapping(value = prefix+"/test/execute3",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse testexecute3(@RequestBody @Validated KillDto killDto, BindingResult result, HttpSession httpSession){
+        if (result.hasErrors()||killDto.getKillid()<0){
+            return new BaseResponse(StatusCode.InvalidParam);
+        }
+        try {
+            Boolean res=killService.KillItemV3(killDto.getKillid(),killDto.getUserid());
+            if (!res){
+                return new BaseResponse(StatusCode.Fail.getCode(),"商品已经抢购完或您已抢购过该商品");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
+        baseResponse.setData("抢购成功");
+        return baseResponse;
+    }
+
+    //redission分布式锁的版本
+    @RequestMapping(value = prefix+"/test/execute4",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse testexecute4(@RequestBody @Validated KillDto killDto, BindingResult result, HttpSession httpSession){
+        if (result.hasErrors()||killDto.getKillid()<0){
+            return new BaseResponse(StatusCode.InvalidParam);
+        }
+        try {
+            Boolean res=killService.KillItemV4(killDto.getKillid(),killDto.getUserid());
+            if (!res){
+                return new BaseResponse(StatusCode.Fail.getCode(),"商品已经抢购完或您已抢购过该商品");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
+        baseResponse.setData("抢购成功");
+        return baseResponse;
+    }
+
+    //zookeeper分布式锁的版本
+    @RequestMapping(value = prefix+"/test/execute5",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse testexecute5(@RequestBody @Validated KillDto killDto, BindingResult result, HttpSession httpSession){
+        if (result.hasErrors()||killDto.getKillid()<0){
+            return new BaseResponse(StatusCode.InvalidParam);
+        }
+        try {
+            Boolean res=killService.KillItemV5(killDto.getKillid(),killDto.getUserid());
+            if (!res){
+                return new BaseResponse(StatusCode.Fail.getCode(),"商品已经抢购完或您已抢购过该商品");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
+        baseResponse.setData("抢购成功");
+        return baseResponse;
+    }
 
 }
